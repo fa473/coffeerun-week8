@@ -1,10 +1,10 @@
 QUnit.test('add', function(assert) {
     var ds = new App.DataStore();
     var obj = {
-        'james@bond.com': "eshpresso",
-        'm@bond.com': "tea"
+        'james@bond.com': 'eshpresso',
+        'm@bond.com': 'tea'
     };
-    var obj2 = { 'm@bond.com': "tea" }
+    var obj2 = { 'm@bond.com': 'tea' };
 
     assert.strictEqual(ds.add('m@bond.com', 'tea'), undefined, 'Added order');
     assert.strictEqual(ds.add('james@bond.com', 'eshpresso'), undefined, 'Added order');
