@@ -26,6 +26,11 @@
         }.bind(this));
     };
 
+    //added function to return the orders list instead of just printing to console
+    Truck.prototype.returnOrders = function() {
+        return this.db.data;
+    };
+
     App.Truck = Truck;
     window.App = App;
 
