@@ -1,4 +1,5 @@
 QUnit.test('add', function(assert) {
+    var App = window.App;
     var ds = new App.DataStore();
     var obj = {
         'james@bond.com': 'eshpresso',
@@ -32,5 +33,20 @@ QUnit.test('truck', function(assert) {
     assert.strictEqual(myTruck.createOrder({
         email: 'me@goldfinger.com',
         coffee: 'double mocha'
+    }), undefined);
+
+    assert.strictEqual(myTruck.createOrder({
+        email: 'dr@no.com',
+        coffee: 'decaf'
+    }), undefined);
+
+    assert.strictEqual(myTruck.createOrder({
+        email: 'm@bond.com',
+        coffee: 'earl grey'
+    }), undefined);
+
+    assert.strictEqual(myTruck.createOrder({
+        email: 'm@bond.com',
+        coffee: 'earl grey'
     }), undefined);
 });
