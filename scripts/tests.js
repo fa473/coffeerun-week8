@@ -38,13 +38,11 @@ QUnit.test('getAll', function(assert) {
 });
 
 QUnit.test('getAll2', function(assert) {
-
-
     ds.remove('james@bond.com');
     assert.deepEqual(ds.getAll(), obj2);
 });
 
-
+//Create a list of test orders
 myTruck.createOrder({
     emailAddress: 'me@goldfinger.com',
     coffee: 'double mocha'
@@ -60,16 +58,12 @@ myTruck.createOrder({
 
 
 QUnit.test('returnorders', function(assert) {
-
     assert.deepEqual(myTruck.returnOrders(), orders);
-
 });
 
 QUnit.test('returnorders2', function(assert) {
     myTruck.deliverOrder('dr@no.com');
     myTruck.deliverOrder('me@goldfinger.com');
-    //console.log(myTruck.returnOrders());
-
     assert.deepEqual(myTruck.returnOrders(), orders2);
 
 });
