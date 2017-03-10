@@ -2,10 +2,12 @@
     'use strict';
     var App = window.App || {};
 
+    //initializer
     function DataStore() {
         this.data = {};
     }
 
+    //all instances of DataStore objects will inherit these methods
     DataStore.prototype.add = function(key, val) {
         this.data[key] = val;
     };

@@ -2,11 +2,13 @@
     'use strict';
     var App = window.App || {};
 
+    //initializer
     function Truck(truckId, db) {
         this.truckId = truckId;
         this.db = db;
     }
 
+    //all instances of Truck objects will inherit these prototype methods
     Truck.prototype.createOrder = function(order) {
         console.log('Adding order for ' + order.emailAddress);
         this.db.add(order.emailAddress, order);
