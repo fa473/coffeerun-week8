@@ -11,4 +11,5 @@
 
     formHandler.addSubmitHandler(myTruck.createOrder.bind(myTruck));
     console.log(formHandler);
+    formHandler.addSliderHandler();
 })(window);
