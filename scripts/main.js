@@ -10,6 +10,7 @@
     var formHandler = new FormHandler(FORM_SELECTOR);
 
     formHandler.addSubmitHandler(myTruck.createOrder.bind(myTruck));
-    //console.log(formHandler);
     formHandler.addSliderHandler();
+    formHandler.unlockAchievements();
+
 })(window);
