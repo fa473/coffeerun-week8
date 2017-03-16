@@ -30,18 +30,18 @@
             console.log(data);
 
             //trigger modal if size is coffeezilla and caffeine rating is 100 and flavor shot is added
-            if (data['size'] == 'coffeezilla' && data['strength'] == 100 && data['flavor'] != '') {
+            if (data['size'] == 'coffeezilla' && data['strength'] == 100 && data['flavor'] != '' && data['achievement'] == undefined) {
                 $('#myModal').modal();
+                //return;
+            } else {
+                fn(data);
+
+                //after order submitted, reset options to default and set focus to first box
+                this.reset();
+                this.elements[0].focus();
+                $('.hidden-achievements').hide();
+                $('label[for=strengthLevel]').text('Caffeine Rating').css('color', 'black');
             }
-
-            //submit order
-            fn(data);
-
-            //after order submitted, reset options to default and set focus to first box
-            this.reset();
-            this.elements[0].focus();
-            $('.hidden-achievements').hide();
-
         });
     };
 
