@@ -12,5 +12,6 @@
     formHandler.addSubmitHandler(myTruck.createOrder.bind(myTruck));
     formHandler.addSliderHandler();
     formHandler.unlockAchievements();
+    formHandler.addResetHandler();
 
 })(window);
