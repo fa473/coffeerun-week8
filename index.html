@@ -47,32 +47,6 @@
     CoffeeZilla
   </label>
                     </div>
-
-
-                    <!---Hidden Achievement Options--------------->
-                    <div class="hidden-achievements">
-                        <label>Power-Up:</label>
-                        <div class="radio">
-                            <label>
-      <input type="radio" name="achievement" value="timetravel" checked>
-      Time Travel
-    </label>
-                        </div>
-                        <div class="radio">
-                            <label>
-      <input type="radio" name="achievement" value="mindreading">
-      Mind Reading
-    </label>
-                        </div>
-                        <div class="radio">
-                            <label>
-      <input type="radio" name="achievement" value="bugfreecode">
-      Bug Free Code
-    </label>
-                        </div>
-                    </div>
-                    <!--------------------------------------------------------->
-
                     <div class="form-group">
                         <label for="flavorShot">Flavor Shot</label>
                         <select id="flavorShot" class="form-control" name="flavor">
@@ -92,6 +66,7 @@
             </div>
         </div>
 
+
         <!-- Modal -->
         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
             <div class="modal-dialog" role="document">
@@ -101,16 +76,33 @@
                         <h4 class="modal-title" id="myModalLabel">Achievement Unlocked!</h4>
                     </div>
                     <div class="modal-body">
-                        Congratulations. Would you like to use your achievement?
+
+                        <div class="radio">
+                            <label>
+      <input type="radio" name="size" value="timetravel" checked>
+      Time Travel
+    </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+      <input type="radio" name="size" value="mindreading">
+      Mind Reading
+    </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+      <input type="radio" name="size" value="bigfreecode">
+      Bug Free Code
+    </label>
+                        </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal" id="no-achievement">No</button>
-                        <button type="button" class="btn btn-primary" data-dismiss="modal" id="yes-achievement">Yes</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
                     </div>
                 </div>
             </div>
         </div>
-        <!---------->
 
     </section>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" charset="utf-8"></script>
