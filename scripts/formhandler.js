@@ -31,15 +31,6 @@
         });
     };
 
-
-    FormHandler.prototype.addSliderHandler = function() {
-        var slider = $('#strengthLevel');
-        slider.on('input change', function() {
-            console.log('changed to ' + slider[0].value);
-        });
-    };
-
-
     App.FormHandler = FormHandler;
     window.App = App;
 })(window);
