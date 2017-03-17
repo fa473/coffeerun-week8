@@ -26,13 +26,6 @@
             });
             console.log(data);
             fn(data);
-
-            //trigger modal if size is coffeezilla and caffeine rating is 100
-            if (data['size'] == 'coffeezilla' && data['strength'] == 100) {
-                $('#myModal').modal();
-            }
-
-            //after order submitted, reset options to default and set focus to first box
             this.reset();
             this.elements[0].focus();
         });
