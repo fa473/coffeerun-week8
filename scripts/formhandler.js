@@ -36,8 +36,6 @@
                 $('#myModal').modal();
                 emailsList.push(data['emailAddress']);
                 console.log(emailsList);
-
-                //check if email has unlocked achievements
             } else if (emailsList.includes(data['emailAddress'])) {
                 $('.hidden-achievements').show();
 
