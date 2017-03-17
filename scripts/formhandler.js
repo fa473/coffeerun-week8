@@ -35,14 +35,7 @@
     FormHandler.prototype.addSliderHandler = function() {
         var slider = $('#strengthLevel');
         slider.on('input change', function() {
-            var rating = slider[0].value;
-            if (rating < 30) {
-                $('label[for=strengthLevel]').text('Caffeine Rating ' + rating).css('color', 'green');
-            } else if (rating >= 30 && rating < 80) {
-                $('label[for=strengthLevel]').text('Caffeine Rating ' + rating).css('color', 'yellow');
-            } else {
-                $('label[for=strengthLevel]').text('Caffeine Rating ' + rating).css('color', 'red');
-            }
+            console.log('changed to ' + slider[0].value);
         });
     };
 
