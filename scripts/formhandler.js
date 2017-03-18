@@ -47,16 +47,19 @@
 
     FormHandler.prototype.checkDecaf = function(fn) {
         console.log('Setting input handler for decaf');
-        this.$formElement.on('input', '[name="coffee"]', function(event) {
-            var coffee = event.target.value;
+        $('input[name=coffee]').add('input[name=strength]').on('input', function() {
+            var coffee = $('input[name=coffee]').val();
             var strength = $('input[name=strength]').val();
             console.log(fn(coffee, strength));
-            var message = '';
             if (fn(coffee, strength)) {
-                event.target.setCustomValidity('');
+                $('input[name=coffee], input[name=strength]').each(function() {
+                    this.setCustomValidity('');
+                });
             } else {
-                message = 'strength level is too high for decaf!';
-                event.target.setCustomValidity(message);
+                var message = 'strength level is too high for decaf!';
+                $('input[name=coffee], input[name=strength]').each(function() {
+                    this.setCustomValidity(message);
+                });
             }
         });
     };
