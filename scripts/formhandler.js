@@ -43,41 +43,24 @@
                 event.target.setCustomValidity(message);
             }
         });
-        // this.$formElement.on('input', '[name="coffee"]', function(event) {
-        //     var coffee = event.target.value;
-        //     var strength = $('input[name=strength]');
-        //     var message = '';
-        //     if (fn(coffee, strength)) {
-        //         event.target.setCustomValidity('');
-        //     } else {
-        //         message = 'strength level is too high for decaf!';
-        //         event.target.setCustomValidity(message);
-        //     }
-        // });
-        // this.$formElement.on('input', '[name="strength"]', function(event) {
-        //     var strength = event.target.value;
-        //     var coffee = $('input[name=coffee]');
-        //     var message = '';
-        //     if (fn(coffee, strength)) {
-        //         event.target.setCustomValidity('');
-        //     } else {
-        //         message = 'strength level is too high for decaf!';
-        //         event.target.setCustomValidity(message);
-        //     }
-        // });
-        // $('input[name=coffee]', 'input[name=strength').on('input', function(event) {
-        //     var coffee = $('input[name=coffee]');
-        //     var strength = $('input[name=strength]');
-        //     var message = '';
-        //     if (fn(coffee, strength)) {
-        //         event.target.setCustomValidity('');
-        //     } else {
-        //         message = 'strength level is too high for decaf!';
-        //         event.target.setCustomValidity(message);
-        //     }
-        // });
-
     };
+
+    FormHandler.prototype.checkDecaf = function(fn) {
+        console.log('Setting input handler for decaf');
+        this.$formElement.on('input', '[name="coffee"]', function(event) {
+            var coffee = event.target.value;
+            var strength = $('input[name=strength]').val();
+            console.log(fn(coffee, strength));
+            var message = '';
+            if (fn(coffee, strength)) {
+                event.target.setCustomValidity('');
+            } else {
+                message = 'strength level is too high for decaf!';
+                event.target.setCustomValidity(message);
+            }
+        });
+    };
+
 
     App.FormHandler = FormHandler;
     window.App = App;
