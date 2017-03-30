@@ -27,7 +27,7 @@
                     console.log('no response');
                     email.get(0).setCustomValidity('');
                 } else {
-                    email.get(0).setCustomValidity(email.val()+ ' Already has an order Pending');
+                    email.get(0).setCustomValidity(email.val() + ' Already has an order Pending');
                 }
             };
 
